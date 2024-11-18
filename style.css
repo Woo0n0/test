@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('fonts/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('fonts/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+}
+body {
+    font-family: 'Pretendard', sans-serif;
+    background: linear-gradient(180deg, #6f00ff 0%, #ff009d 100%);
+    aspect-ratio: 1/2;
+}
+.text {
+    font-size: 68px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    padding: 5em 2em;
+}
+.background-image-absolute {
+    position: absolute;
+    top: 80%;
+    z-index: -1;
+    padding: 40px;
+}
+.background-image-absolute img {
+    width: 100%;
+}
+.wave-image img {
+    width: 100%;
+}
+.wave-image:hover img {
+    animation-name: wave-animation;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.backgound-image {
+    position: fixed;
+    top: 100px;
+    z-index: -1;
+    padding: 0 40px 0 40px;
+}
+.backgound-image img {
+    width: 100%;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(50%);
+    }
+    75% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
